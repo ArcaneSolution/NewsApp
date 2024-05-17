@@ -19,7 +19,6 @@ class HomeViewModel {
             getDataFromCache()
             return
         }
-        print("Calling api")
         NewsRest.getPopularNews().fetchData()
             .sink { completion in
                 if case .failure(let err) = completion {
@@ -39,7 +38,6 @@ class HomeViewModel {
         CacheManager.shared.saveNews(newsData: self.news)
     }
     func getDataFromCache(){
-        print("getting from cache")
         self.news = CacheManager.shared.getNews()
         self.isLoading=false
     }
