@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="crA-4N-9rM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="U29-vb-4lB">
+            <objects>
+                <navigationController id="crA-4N-9rM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aLj-op-5HK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nmA-Gb-vce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8c8-7T-Nv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="-18"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-5N-QOu">
+                                <rect key="frame" x="0.0" y="123" width="393" height="695"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mu6-5N-QOu" secondAttribute="trailing" id="1jD-XQ-YNz"/>
+                            <constraint firstItem="Mu6-5N-QOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6gi-7y-XuL"/>
+                            <constraint firstItem="Mu6-5N-QOu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kaH-8f-4bX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mu6-5N-QOu" secondAttribute="bottom" id="uU9-jD-ACi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J1D-Mz-9JH"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mu6-5N-QOu" id="Qr4-RZ-RsR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.3969465648854964" y="-17.605633802816904"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="7wA-wD-4f0">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="e5g-2D-KSF" customClass="DetailVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Wx-u3-2HJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Avi-Tp-GaD">
+                                <rect key="frame" x="0.0" y="59" width="393" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="9kA-bs-gTW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 54 Celebrities, Executives and Allies on Trump’s ‘Close Contacts’ List" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVo-7C-Hbj">
+                                <rect key="frame" x="20" y="395.66666666666669" width="353" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" name="TextPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The 54 Celebrities, Executives and Allies on Trump’s ‘Close Contacts’ List" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgj-Lc-qBy">
+                                <rect key="frame" x="32" y="343" width="329" height="32.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" name="TextSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXZ-ra-hOE">
+                                <rect key="frame" x="32" y="311.33333333333331" width="28.333333333333329" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-Zi-UrJ">
+                                <rect key="frame" x="20" y="479.33333333333331" width="353" height="15.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" name="TextPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-UC-ZvI">
+                                <rect key="frame" x="20" y="516.66666666666663" width="353" height="15.333333333333371"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" name="TextSecondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SA1-p5-NZ4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vXZ-ra-hOE" firstAttribute="leading" secondItem="zgj-Lc-qBy" secondAttribute="leading" id="3gh-R3-rhH"/>
+                            <constraint firstItem="SA1-p5-NZ4" firstAttribute="trailing" secondItem="zgj-Lc-qBy" secondAttribute="trailing" constant="32" id="4ZH-Nt-PaD"/>
+                            <constraint firstItem="Avi-Tp-GaD" firstAttribute="top" secondItem="SA1-p5-NZ4" secondAttribute="top" id="4xm-Cb-XKJ"/>
+                            <constraint firstItem="9yX-UC-ZvI" firstAttribute="leading" secondItem="SA1-p5-NZ4" secondAttribute="leading" constant="20" id="72M-GR-fUi"/>
+                            <constraint firstItem="SA1-p5-NZ4" firstAttribute="trailing" secondItem="wVo-7C-Hbj" secondAttribute="trailing" constant="20" id="8Rk-hf-Ce1"/>
+                            <constraint firstItem="gQB-Zi-UrJ" firstAttribute="top" secondItem="wVo-7C-Hbj" secondAttribute="bottom" constant="12" id="CS7-D1-ijf"/>
+                            <constraint firstItem="Avi-Tp-GaD" firstAttribute="trailing" secondItem="SA1-p5-NZ4" secondAttribute="trailing" id="HQF-94-D1a"/>
+                            <constraint firstItem="Avi-Tp-GaD" firstAttribute="leading" secondItem="SA1-p5-NZ4" secondAttribute="leading" id="IqW-QP-5x2"/>
+                            <constraint firstItem="zgj-Lc-qBy" firstAttribute="top" secondItem="vXZ-ra-hOE" secondAttribute="bottom" constant="16" id="Q9F-Y1-nSg"/>
+                            <constraint firstItem="wVo-7C-Hbj" firstAttribute="leading" secondItem="SA1-p5-NZ4" secondAttribute="leading" constant="20" id="QTJ-3M-xij"/>
+                            <constraint firstItem="SA1-p5-NZ4" firstAttribute="trailing" secondItem="gQB-Zi-UrJ" secondAttribute="trailing" constant="20" id="ZE4-1v-rC4"/>
+                            <constraint firstItem="SA1-p5-NZ4" firstAttribute="trailing" secondItem="9yX-UC-ZvI" secondAttribute="trailing" constant="20" id="Zo7-v2-QgE"/>
+                            <constraint firstItem="zgj-Lc-qBy" firstAttribute="top" secondItem="Avi-Tp-GaD" secondAttribute="bottom" constant="4" id="hxy-cB-HIZ"/>
+                            <constraint firstItem="wVo-7C-Hbj" firstAttribute="top" secondItem="zgj-Lc-qBy" secondAttribute="bottom" constant="20" id="iEP-is-mRa"/>
+                            <constraint firstItem="gQB-Zi-UrJ" firstAttribute="leading" secondItem="SA1-p5-NZ4" secondAttribute="leading" constant="20" id="jof-KJ-xrG"/>
+                            <constraint firstItem="zgj-Lc-qBy" firstAttribute="leading" secondItem="SA1-p5-NZ4" secondAttribute="leading" constant="32" id="lli-z3-O4q"/>
+                            <constraint firstItem="9yX-UC-ZvI" firstAttribute="top" secondItem="gQB-Zi-UrJ" secondAttribute="bottom" constant="22" id="yRJ-cz-AGT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abstractLbl" destination="gQB-Zi-UrJ" id="rMn-Tr-Ph0"/>
+                        <outlet property="byLineLbl" destination="9yX-UC-ZvI" id="NVq-pB-sKR"/>
+                        <outlet property="captionLbl" destination="zgj-Lc-qBy" id="Yrh-VV-oIh"/>
+                        <outlet property="dateLbl" destination="vXZ-ra-hOE" id="j0k-Iq-5P3"/>
+                        <outlet property="newsImg" destination="Avi-Tp-GaD" id="hs9-rp-R10"/>
+                        <outlet property="titleLbl" destination="wVo-7C-Hbj" id="xni-7l-6eg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9j-mn-Qm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.16030534351137" y="-18.30985915492958"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="TextPrimary">
+            <color red="0.12549019607843137" green="0.10196078431372549" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextSecondary">
+            <color red="0.566869362113402" green="0.566869362113402" blue="0.566869362113402" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
